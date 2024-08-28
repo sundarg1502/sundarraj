@@ -348,10 +348,57 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
 /*.single-about-img */
 
 /*-------------------------------------
+        5.  Education
+--------------------------------------*/
+
+.education {
+    background:  #f9fbfd;
+    padding-top:  50px;
+    border-top: 3px solid #999fb3;
+
+}
+.education .section-heading h2{
+    border-bottom: 3px solid #999fb3;
+}
+.education-horizontal-timeline {
+    padding: 80px 0;
+}
+
+/*.education-horizontal-timeline*/
+.education-horizontal-timeline .col-sm-4 {padding:0 2px;}
+
+.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
+.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
+.single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
+.single-horizontal-timeline p {color: #999fb3;max-width: 335px;}
+
+/*.timeline-horizontal-border*/
+.timeline-horizontal-border {
+    display:  flex;
+    align-items: center;
+    padding: 26px 0 30px;
+}
+.timeline-horizontal-border i {
+    font-size:  10px;
+    color: #6E57E0;
+    margin-right:  5px;
+}
+span.single-timeline-horizontal {
+    display:  inline-block;
+    background: #b2c1ce;
+    height:  1px;
+    width: 380px;
+}
+span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
+/*.timeline-horizontal-border*/
+
+/*.education-horizontal-timeline*/
+
+/*-------------------------------------
         6.  Skills
 --------------------------------------*/
 .skills {
-    border-top: 3px solid #e5ebf2;
+    border-top: 3px solid #999fb3;
 }
 .skill-content{padding: 50px 0 80px;}
 .single-skill-content{padding-top: 100px;}
@@ -360,7 +407,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 50px;
-    border-bottom: 3px solid #e5ebf2;
+    border-bottom: 3px solid #999fb3;
 }
 .single-progress-txt {
     display: flex;
@@ -431,7 +478,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
 -------------------------------------*/
 .experience {
     padding: 50px 0 100px;
-    border-top: 3px solid #e5ebf2;
+    border-top: 3px solid #999fb3;
 }
 .experience-content {padding-top: 100px;}
 .single-timeline-box {margin-bottom: 75px;}
@@ -442,6 +489,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
 }
 .experience-time h2 {
     font-weight: 400;
+    
 }
 .experience-time h3 {
     font-size: 16px;
@@ -514,14 +562,17 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
 .contact {
     background: #f9fbfd;
     padding: 50px 0 100px;
-    border-top: 3px solid #e5ebf2;
+    border-top: 3px solid #999fb3;
 }
 
 .contact-adress{
     display: flex;
+    align-items: center;
+    justify-content:space-around;
+    height: 15px;
     /* position: relative; */
-    height:50px;
-    width: 100%;
+    /* height:50px;
+    width: 100%; */
     /* padding-top: 25px; */
 }
 
@@ -531,8 +582,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
 .contact-add-head h3 {
     font-size:  24px;
     color:  #3c4258;
-    padding-top: 40px;
-    padding-left: 50%;
+    padding-top: 110px;
+    padding-left: 80px;
 }
 .contact-add-head p {
     font-size:  16px;
@@ -564,22 +615,41 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
 /* .hm-foot-icon {
    
 } */
-.contact-container{
+/* .contact-container{
     position: relative;
-}
-.contact-container .contact-adress{
+} */
+/* .conta.contact-adress{
     position: absolute;
     padding-left: 30%;
+} */
+.hm-foot-icon{
+    padding-top: 110px;
+    padding-left: 0px;
+    display: flex;
+    white-space: 10px;
+    padding-left: 10px;
+    /* width: 109%;
+    height: 90px; */
+    /* letter-spacing: 1px; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
 }
 .hm-foot-icon ul{
-    padding-top: 40px;
-    padding-left: 100%;
-}
+    letter-spacing: 40px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around; */
+    /* padding-top: 40px;
+    /* padding-left: 100%; */
+} 
 .hm-foot-icon ul li{
-    float:left;
+    float:right;
 }
 .hm-foot-icon ul li>a {
     color: #636a82;
+    /* border: 2px solid; */
+    /* border-radius: 25%; */
+    /* size: 40%; */
     /* margin-right:18px; */
     -webkit-transition: .3s; 
     -moz-transition:.3s; 

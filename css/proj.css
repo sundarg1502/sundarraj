@@ -25,14 +25,14 @@ header a{
 } */
 .project {
     padding: 50px 0 100px;
-    border-top: 3px solid #e5ebf2;
+    border-top: 3px solid #999fb3;
 }
 .project-section-heading h2 {
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 50px;
-    border-bottom: 3px solid #e5ebf2;
+    border-bottom: 3px solid #999fb3;
 }
 /* carousel */
 .carousel-parent{

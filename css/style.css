@@ -291,7 +291,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
     position: relative;
     box-shadow: 0 5px 20px rgba(14,25,80,.30);
     height: 500px;
-    width: 350px;
+    width: 310px;
     /* border-radius: 50%; */
 }
 .single-about-img:before {
@@ -570,7 +570,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     align-items: center;
     justify-content:space-around;
     height: 15px;
-} */
+    /* position: relative; */
+    /* height:50px;
+    width: 100%; */
+    /* padding-top: 25px; */
+}
 
 /*--contct button--*/
 
@@ -654,7 +658,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transition: .3s;
 }
 .hm-foot-icon ul li>a:hover{
-    color: #b636ff;
+    color: #6E57E0;
 }/*hm-foot-icon*/
 
 .hm-footer-copyright p{

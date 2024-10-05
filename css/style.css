@@ -210,6 +210,32 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
     width:100%;
     height:100%;
 }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .welcome-hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position:relative;
+        background:url(../images/about/768.png)no-repeat;
+        background-size:cover;
+        background-position: center;
+        height:850px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position:relative;
+        background:url(../images/about/480.png)no-repeat;
+        background-size:cover;
+        background-position: center;
+        height:800px;
+    }
+}
 
 /*.header-text-area*/
 .header-text h2 {
@@ -291,7 +317,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #6E57E0;}
     position: relative;
     box-shadow: 0 5px 20px rgba(14,25,80,.30);
     height: 500px;
-    width: 310px;
+    width: 302px;
     /* border-radius: 50%; */
 }
 .single-about-img:before {
@@ -473,6 +499,22 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-transform: capitalize;
     position: absolute;
 }
+@media (max-width: 768px) {
+    .skill-heading h1 {
+        /* position: relative; */
+        font-size: 1.8em; /* Slightly smaller for tablets */
+        padding-left: 25%;
+    }
+}
+
+/* Adjust for mobile devices */
+@media (max-width: 480px) {
+    .skill-heading h1 {
+        font-size: 1.5em; /* Smaller size for mobile */
+        padding-left: 30%;
+    }
+}
+
 /*-------------------------------------
         7. Experience
 -------------------------------------*/
@@ -667,6 +709,36 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     padding: 38px 0;
 }
 .hm-footer-copyright p a {color: #888ea5;}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hm-foot-icon {
+        padding-top: 80px; /* Reduced padding for tablets */
+    }
+
+    .hm-foot-icon ul {
+        letter-spacing: 20px; /* Reduced letter-spacing */
+    }
+    
+    .hm-foot-icon ul li > a {
+        font-size: 1.2em; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .hm-foot-icon {
+        padding-top: 60px; /* Further reduced padding for mobile */
+        padding-left: 5px; /* Adjust left padding */
+    }
+
+    .hm-foot-icon ul {
+        letter-spacing: 10px; /* Even smaller letter-spacing */
+    }
+    
+    .hm-foot-icon ul li > a {
+        font-size: 1em; /* Smaller font size for mobile */
+    }
+}
 /*===============================
     Scroll Top
 ===============================*/

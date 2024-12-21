@@ -953,6 +953,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 30px;
+    margin-top: 60px;
 }
 
 .about-description {
@@ -970,6 +971,7 @@ body {
     text-align: center;
     font-size: 28px;
     font-weight: 600;
+    margin-top: -50px;
     margin-bottom: 40px;
     text-transform: uppercase;
 }

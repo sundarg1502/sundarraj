@@ -999,9 +999,10 @@ body {
     transform: translateY(-5px);
     border : 2px solid #0f33ff;
     background-color: #0f33ff;
+    color: #c0c0c0;
 }
 
-.education-card h4:hover{
+.education-card:hover h4{
     color: white;
 }
 
@@ -1075,6 +1076,267 @@ body {
         padding: 20px;
     }
 }
+.experience {
+    position: relative;
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+    font-family: 'Fira Code', monospace;
+}
+
+.experience h2 {
+    color: #c678dd;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.closing-brace {
+    margin-top: 20px;
+}
+
+.terminal-window {
+    background: #282c34;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform: perspective(1000px) rotateX(2deg);
+    transition: transform 0.3s ease;
+}
+
+.terminal-window:hover {
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+.terminal-header {
+    background: #21252b;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #181a1f;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+    color: #abb2bf;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.terminal-body {
+    padding: 30px;
+    color: #abb2bf;
+    height: calc(100% - 40px);
+    font-size: 15px;
+    line-height: 1.6;
+    max-height: 400px;  /* Adjust this value as needed */
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.code-block {
+    position: relative;
+    height: 400px;
+}
+
+.code-line {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+
+.line-number {
+    color: #495162;
+    min-width: 30px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.keyword {
+    color: #c678dd;
+}
+
+.code-content {
+    margin-left: 45px;
+    padding: 10px 0 20px 20px;
+    border-left: 1px dashed #3d4350;
+    margin-bottom: 20px;
+}
+
+.role-info {
+    margin-bottom: 15px;
+}
+
+.property {
+    color: #e06c75;
+}
+
+.comment {
+    color: #7f848e;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.achievement-item {
+    color: #98c379;
+    margin: 8px 0;
+    position: relative;
+    padding-left: 5px;
+    transition: transform 0.2s ease;
+}
+
+.achievement-item:hover {
+    transform: translateX(10px);
+}
+
+/* Add typing animation effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.code-block::after {
+    content: '|';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #61afef;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.terminal-window {
+    overflow: hidden;
+  }
+/* Cool hover effects */
+.terminal-window::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff5f56, #ffbd2e, #27c93f);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.terminal-window:hover::before {
+    transform: scaleX(1);
+}
+
+.role-info span {
+    display: inline-block;
+    position: relative;
+}
+
+.role-info span::after {
+    content: ',';
+    color: #61afef;
+}
+
+.role-info span:last-child::after {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .experience {
+        padding: 30px 15px;
+    }
+    
+    .terminal-window {
+        transform: none;
+    }
+    
+    .code-content {
+        margin-left: 25px;
+        padding-left: 15px;
+    }
+    
+    .terminal-body {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+/* Add glitch effect on hover */
+@keyframes glitch {
+    0% { transform: translate(0) }
+    20% { transform: translate(-2px, 2px) }
+    40% { transform: translate(-2px, -2px) }
+    60% { transform: translate(2px, 2px) }
+    80% { transform: translate(2px, -2px) }
+    100% { transform: translate(0) }
+}
+
+.code-line:hover .keyword {
+    animation: glitch 0.3s linear;
+}
+  
+  /* Webkit browsers (Chrome, Safari, newer Edge) */
+  .terminal-body::-webkit-scrollbar {
+    width: 8px;
+    background: #282c34;
+  }
+  
+  .terminal-body::-webkit-scrollbar-thumb {
+    background: #3d4350;
+    border-radius: 4px;
+    border: 2px solid #282c34;
+  }
+  
+  .terminal-body::-webkit-scrollbar-thumb:hover {
+    background: #61afef;
+    box-shadow: 0 0 8px rgba(97, 175, 239, 0.5);
+  }
+  
+  .terminal-body::-webkit-scrollbar-track {
+    background: #21252b;
+    border-radius: 4px;
+  }
+  
+  /* Firefox */
+  .terminal-body {
+    scrollbar-width:auto;
+    scrollbar-color: #3d4350 #282c34;
+  }
+  
+ 
+  /* Add subtle fade effect at the bottom */
+  .terminal-body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(transparent, rgba(40, 44, 52, 0.9));
+    pointer-events: none;
+  }
+  
+  /* Ensure content doesn't overlap with fade */
+  .terminal-body {
+    padding-bottom: 40px;
+  }
+
 .work {
     position: relative;
     display: -webkit-box;

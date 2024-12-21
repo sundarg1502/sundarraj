@@ -278,3 +278,44 @@ $( document ).ready(function() {
   transitionLabels();
 
 });
+
+
+
+// Add this JavaScript to handle scroll behavior
+document.addEventListener('DOMContentLoaded', () => {
+  const terminalBody = document.querySelector('.terminal-body');
+  const section = document.querySelector('.l-section.section');
+
+  // Prevent scroll propagation from terminal body to window
+  terminalBody.addEventListener('wheel', (e) => {
+    const isAtTop = terminalBody.scrollTop === 0;
+    const isAtBottom = terminalBody.scrollHeight - terminalBody.scrollTop === terminalBody.clientHeight;
+
+    // If not at bounds or scrolling in valid direction, prevent propagation
+    if (!(isAtTop && e.deltaY < 0) && !(isAtBottom && e.deltaY > 0)) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  // Additional handling for touch devices
+  terminalBody.addEventListener('touchstart', (e) => {
+    terminalBody.startY = e.touches[0].pageY;
+  }, { passive: true });
+
+  terminalBody.addEventListener('touchmove', (e) => {
+    if (!terminalBody.startY) {
+      return;
+    }
+
+    const y = e.touches[0].pageY;
+    const delta = terminalBody.startY - y;
+    const isAtTop = terminalBody.scrollTop === 0;
+    const isAtBottom = terminalBody.scrollHeight - terminalBody.scrollTop === terminalBody.clientHeight;
+
+    // Prevent default only if scrolling would be within bounds
+    if (!(isAtTop && delta < 0) && !(isAtBottom && delta > 0)) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+});

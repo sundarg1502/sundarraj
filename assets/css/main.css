@@ -1055,20 +1055,42 @@ body {
     .about-content h2 {
         font-size: 30px;
     }
-    
+    .about-content{
+        padding-top: 250px;
+    }
+    .about-content h2{
+        margin-bottom: 10px;
+    }
     .about-description {
-        font-size: 16px;
+        font-size: 12px;
+    }
+    .education-section{
+        margin-bottom: 200px;
     }
 }
 
 @media (max-width: 767px) {
     .education-cards {
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
+    }    
+    .about-content{
+        padding-top: 200px;
     }
-    
-    .education-card {
-        max-width: 100%;
+    .about-content h2{
+        margin-bottom: 10px;
+    }
+    .about-description {
+        font-size: 12px;
+    }
+    .education-section h3{
+        margin-bottom: 20px;
+    }
+    .card-content h4{
+        font-size: 15px;
+    }
+    .institution{
+        font-size: 11px;
     }
 }
 

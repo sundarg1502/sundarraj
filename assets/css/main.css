@@ -1844,6 +1844,7 @@ body {
     display: flex;
     width: 900px;
     max-width: 75%;
+    /* border-radius: 25%; */
     height: 100%;
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -1853,7 +1854,7 @@ body {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 @media (max-width: 1180px) {
@@ -1874,6 +1875,7 @@ body {
 .contact--lockup .modal {
     padding: 45px 45px;
     /* border:2px solid blue; */
+    border-radius: 20px;
     text-align: center;
     background-color: #0c0c0c;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.75)
@@ -1902,9 +1904,9 @@ body {
     width: 130px;
     margin: 0 auto 25px auto
 }
-.contact--lockup .modal--options li{
+/* .contact--lockup .modal--options li{
     background-color: #0f33ff
-} 
+}  */
 /* .contact--lockup .modal--options #github{
     color: black;
 } */
@@ -1928,7 +1930,16 @@ body {
     padding: 8px 0;
     text-decoration: none;
     color: #fff;
-    font-weight: 700
+    font-weight: 700;
+    /* border: 2px solid blue; */
+    background-color: #0f33ff;
+    border-radius: 25px;
+}
+.contact--lockup .modal--options a:hover{
+    transform: translatey(-5px);
+    color: #0f33ff;
+    background-color: #000;
+    border :2px solid #0f33ff;
 }
 
 .hire {

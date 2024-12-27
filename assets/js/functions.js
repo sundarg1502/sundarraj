@@ -321,3 +321,104 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Certificate section
+/* Add JavaScript for carousel functionality */
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const track = document.querySelector('.certificates--track');
+//     const items = document.querySelectorAll('.certificate-item');
+//     const dots = document.querySelector('.certificates--dots');
+//     const prevBtn = document.querySelector('.nav-btn.prev');
+//     const nextBtn = document.querySelector('.nav-btn.next');
+//     let currentIndex = 0;
+
+//     // Create dots
+//     items.forEach((_, index) => {
+//         const dot = document.createElement('div');
+//         dot.classList.add('dot');
+//         if (index === 0) dot.classList.add('active');
+//         dots.appendChild(dot);
+//     });
+
+//     // Navigation
+//     function updateCarousel(index) {
+//         const offset = -index * (300 + 30); // item width + gap
+//         track.style.transform = `translateX(${offset}px)`;
+//         document.querySelectorAll('.dot').forEach((dot, i) => {
+//             dot.classList.toggle('active', i === index);
+//         });
+//     }
+
+//     prevBtn.addEventListener('click', () => {
+//         currentIndex = Math.max(currentIndex - 1, 0);
+//         updateCarousel(currentIndex);
+//     });
+
+//     nextBtn.addEventListener('click', () => {
+//         currentIndex = Math.min(currentIndex + 1, items.length - 1);
+//         updateCarousel(currentIndex);
+//     });
+// });
+// const track = document.querySelector(".certificates--track");
+// let isDown = false;
+// let startX;
+// let scrollLeft;
+
+// track.addEventListener("mousedown", (e) => {
+//     isDown = true;
+//     track.classList.add("active");
+//     startX = e.pageX - track.offsetLeft;
+//     scrollLeft = track.scrollLeft;
+// });
+
+// track.addEventListener("mouseleave", () => {
+//     isDown = false;
+//     track.classList.remove("active");
+// });
+
+// track.addEventListener("mouseup", () => {
+//     isDown = false;
+//     track.classList.remove("active");
+// });
+
+// track.addEventListener("mousemove", (e) => {
+//     if (!isDown) return;
+//     e.preventDefault();
+//     const x = e.pageX - track.offsetLeft;
+//     const walk = (x - startX) * 2; //scroll-fast
+//     track.scrollLeft = scrollLeft - walk;
+// });
+
+const track = document.querySelector(".certificates--track");
+const prevButton = document.querySelector(".nav-btn.prev");
+const nextButton = document.querySelector(".nav-btn.next");
+let currentIndex = 0;
+
+// Function to update the carousel's position
+function updateCarousel() {
+  const trackWidth = track.offsetWidth;
+  const itemWidth = track.querySelector(".certificate-item").offsetWidth;
+  const visibleItems = Math.floor(trackWidth / (itemWidth + 30)); // Adjust for gap
+  const totalItems = track.children.length;
+  const maxIndex = totalItems - visibleItems;
+
+  // Clamp the index within bounds
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+  const translateX = -(currentIndex * (itemWidth + 30));
+  track.style.transform = `translateX(${translateX}px)`;
+}
+
+// Event listeners for navigation buttons
+prevButton.addEventListener("click", () => {
+  currentIndex--;
+  updateCarousel();
+});
+
+nextButton.addEventListener("click", () => {
+  currentIndex++;
+  updateCarousel();
+});
+
+// Initialize the carousel position
+updateCarousel();

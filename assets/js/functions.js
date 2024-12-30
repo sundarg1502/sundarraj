@@ -388,37 +388,38 @@ document.addEventListener('DOMContentLoaded', () => {
 //     track.scrollLeft = scrollLeft - walk;
 // });
 
-const track = document.querySelector(".certificates--track");
-const prevButton = document.querySelector(".nav-btn.prev");
-const nextButton = document.querySelector(".nav-btn.next");
-let currentIndex = 0;
+// const track = document.querySelector(".certificates--track");
+// const prevButton = document.querySelector(".nav-btn.prev");
+// const nextButton = document.querySelector(".nav-btn.next");
+// let currentIndex = 0;
 
-// Function to update the carousel's position
-function updateCarousel() {
-  const trackWidth = track.offsetWidth;
-  const itemWidth = track.querySelector(".certificate-item").offsetWidth;
-  const visibleItems = Math.floor(trackWidth / (itemWidth + 30)); // Adjust for gap
-  const totalItems = track.children.length;
-  const maxIndex = totalItems - visibleItems;
+// // Function to update the carousel's position
+// function updateCarousel() {
+//   const trackWidth = track.offsetWidth;
+//   const itemWidth = track.querySelector(".certificate-item").offsetWidth;
+//   const visibleItems = Math.floor(trackWidth / (itemWidth + 30)); // Adjust for gap
+//   const totalItems = track.children.length;
+//   const maxIndex = totalItems - visibleItems;
 
-  // Clamp the index within bounds
-  if (currentIndex < 0) currentIndex = 0;
-  if (currentIndex > maxIndex) currentIndex = maxIndex;
+//   // Clamp the index within bounds
+//   if (currentIndex < 0) currentIndex = 0;
+//   if (currentIndex > maxIndex) currentIndex = maxIndex;
 
-  const translateX = -(currentIndex * (itemWidth + 30));
-  track.style.transform = `translateX(${translateX}px)`;
-}
+//   const translateX = -(currentIndex * (itemWidth + 30));
+//   track.style.transform = `translateX(${translateX}px)`;
+// }
 
-// Event listeners for navigation buttons
-prevButton.addEventListener("click", () => {
-  currentIndex--;
-  updateCarousel();
-});
+// // Event listeners for navigation buttons
+// prevButton.addEventListener("click", () => {
+//   currentIndex--;
+//   updateCarousel();
+// });
 
-nextButton.addEventListener("click", () => {
-  currentIndex++;
-  updateCarousel();
-});
+// nextButton.addEventListener("click", () => {
+//   currentIndex++;
+//   updateCarousel();
+// });
 
-// Initialize the carousel position
-updateCarousel();
+// // Initialize the carousel position
+// updateCarousel();
+

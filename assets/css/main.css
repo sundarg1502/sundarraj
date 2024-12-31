@@ -1427,7 +1427,7 @@ body {
   .graph-container {
     display: grid;
     grid-template-columns: repeat(52, 1fr);
-    gap: 2px;
+    gap: 3px;
   }
   
   .graph-cell {
@@ -1435,6 +1435,7 @@ body {
     height: 10px;
     border-radius: 2px;
     background: #161b22;
+    margin: 3px;
   }
   
   .graph-cell.level-0 { background: #161b22; }

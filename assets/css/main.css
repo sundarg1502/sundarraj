@@ -2424,15 +2424,23 @@ body {
     /* padding-right: 200px; */
 }
 
-.cert-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
+/* .cert-icon { */
+    /* font-size: 48px; */
+    /* margin-bottom: 20px; */
+/* } */
+.cert-icon img{
+    height:100px;
+    border-radius: 50%;
+    /* /* position:absolute; */
+    top: 50;
+    margin-top: 15px;
+    margin-left : 40px; */
 }
 
 .certificate-front h3 {
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
-    margin: 15px 0;
+    margin: 13px 0;
     text-align: center;
 }
 

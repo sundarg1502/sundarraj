@@ -2431,16 +2431,19 @@ body {
 .cert-icon img{
     height:100px;
     border-radius: 50%;
-    /* /* position:absolute; */
-    top: 50;
-    margin-top: 15px;
+    position:absolute;
+    top: 10px;
+    left: 75px;
+    /* margin-bottom: 2px; */
+    /* margin-top: 15px;
     margin-left : 40px; */
 }
 
 .certificate-front h3 {
     font-size: 20px;
     color: #fff;
-    margin: 13px 0;
+    /* margin: 15px 0; */
+    margin-top: 100px;
     text-align: center;
 }
 

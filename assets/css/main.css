@@ -721,7 +721,25 @@ body {
     position: relative;
     height: 475px
 }
-
+.intro--banner a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgba(15,51,255,0.1);
+    color: white;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 14px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-weight: 400;
+    transition: all .55s ease;
+}
+.intro--banner a:hover{
+    box-shadow: 0 2px 2px #33a0ff; 
+    background:#0f33ff;
+    border: 1px solid #0f33ff;
+    transform: translatey(-5px);
+}
 .intro--banner::before {
     content: "";
     position: absolute;
@@ -2240,7 +2258,7 @@ body {
   
   .skill-node:hover {
     transform: translateY(-5px);
-    background: rgba(15,51,255,0.1);
+    background: rgba(15,51,255,0.1);///
     box-shadow: 0 0 30px rgba(15,51,255,0.1);
   }
   

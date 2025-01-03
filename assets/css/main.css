@@ -2143,6 +2143,9 @@ body {
     .certificates--track{
         padding-left: 20px;
     }
+    .cert-icon img{
+        left: 75px;
+    }
 }
 /* @media (max-width: 600px ) 
     
